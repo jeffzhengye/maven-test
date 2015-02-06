@@ -1,0 +1,42 @@
+## Eclipse
+.project
+.pydevproject
+.classpath
+.settings/
+.apt_generated/
+gen/
+bin/
+
+*/*.log
+*/test-output
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Maven
+target/
+libs/
+*.class
+*.png
+*.dot
+
+# Python/NER
+training_files/
+*.pyc
+
+# Model
+
+# result
+analysis
+*.score
+
+# ner data
+
+# temp file
+*.swp
+temp
+tmp
+err*.txt
+#src/*.txt
+

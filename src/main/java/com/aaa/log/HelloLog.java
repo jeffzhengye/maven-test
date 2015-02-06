@@ -12,12 +12,12 @@ public class HelloLog {
         System.out.println(property);
         
         java.util.logging.Logger log = java.util.logging.Logger.getLogger("MyClass");
-        for (int i = 0; i < 10; i++)
-            if (i % 2 == 0)
-                LOGGER.info("Hello {}", i);
-            else
-                LOGGER.debug("I am on index {}", i);
-        LOGGER.error("why no output?");
+//        for (int i = 0; i < 10; i++)
+//            if (i % 2 == 0)
+//                LOGGER.info("Hello {}", i);
+//            else
+//                LOGGER.debug("I am on index {}", i);
+//        LOGGER.error("why no output?");
         log.info("can i");
     }
 }
