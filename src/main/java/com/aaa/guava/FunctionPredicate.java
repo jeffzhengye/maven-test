@@ -3,7 +3,10 @@
  */
 package com.aaa.guava;
 
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import lombok.extern.slf4j.Slf4j;
@@ -20,6 +23,8 @@ import static com.google.common.base.Functions.*;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
+import com.google.common.collect.Ordering;
 import com.google.common.collect.Sets;
 
 /**
@@ -29,6 +34,17 @@ import com.google.common.collect.Sets;
 
 @Slf4j
 public class FunctionPredicate {
+    
+    public static void testIterableCycle(){
+        List<String> list = Lists.newArrayList("Justin", "Jessie", "jeff");
+        int i =0;
+        for(String a: Iterables.cycle(list)){
+            if(i > 100) break;
+            log.info(a);
+            i++;
+        }
+    }
+
 
     public static void testListTrans() {
         List<String> list = Lists.newArrayList("Justin", "Jessie", "jeff");
@@ -90,10 +106,21 @@ public class FunctionPredicate {
     }
 
     /**
+     * throw errors when map is empty.
+     */
+    public static void testGetMax(){
+        HashMap<String, Integer> map = Maps.newHashMap();
+        log.info("max=" + Collections.max(map.values()));
+        map.put("1", 5);
+        Integer max = Ordering.<Integer>natural().max(map.values());
+        log.info("max=" + max);
+    }
+    
+    /**
      * @param args
      */
     public static void main(String[] args) {
-        testFilter();
+        testIterableCycle();
     }
 
 }

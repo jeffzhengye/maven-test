@@ -40,7 +40,9 @@ public class Inheritance {
     public static void main(String[] args) {
         InheritA a = new InheritA();
         InheritB b = new InheritB();
+        //will have multiple copy
         log.info("different: " + (a.getDifferentOne() == b.getDifferentOne()));
+        //only one copy will be in memory
         log.info("same: " + (a.getSameOne() == b.getSameOne()));
 
     }
