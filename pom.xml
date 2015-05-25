@@ -16,7 +16,6 @@
  </repositories>
   
   	<dependencyManagement>
-
 		<dependencies>
 			<dependency>
 		        <groupId>org.nlpcn</groupId>
@@ -154,5 +153,4 @@
       </resource>
     </resources>
   </build>
-  
 </project>
