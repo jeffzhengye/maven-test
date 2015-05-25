@@ -76,10 +76,16 @@ public class RegexExamples {
             System.out.println(msg);
         }
     }
+    
+    public static void gaz_pattern() {
+        Pattern GAZ_PATTERN = Pattern.compile("<.*>");
+        System.out.println(GAZ_PATTERN.matcher("<haha").find());
+    }
 
     public static void main(String[] args) {
-        testLookAhead();
-        testLookBehind();
-        log.info(StringUtils.replacePattern("程序微信软件", "app|应用|应用程序|程序|软件|软体", ""));
+//        testLookAhead();
+//        testLookBehind();
+//        log.info(StringUtils.replacePattern("程序微信软件", "app|应用|应用程序|程序|软件|软体", ""));
+        gaz_pattern();
     }
 }
